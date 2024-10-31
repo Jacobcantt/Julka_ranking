@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ranking TikTok Giftów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video autoplay muted loop id="background-video">
+  <source src="hall.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje wideo HTML5.
+</video>
+<div class="ranking-header">
+  <h1>Ranking JULKI</h1>
+  <p>Sprawdź, kto wysłał najwięcej monet!</p>
+</div>
+
+<div class="ranking-container">
+  <div id="rank1" class="rank-item top-rank" data-index="0">
+    <span class="username" contenteditable="true">Użytkownik 1</span>
+    <span class="coins" contenteditable="true">0</span>
+    <span class="coin-label"> monet 🥇</span>
+  </div>
+  <div id="rank2" class="rank-item sec-rank" data-index="1">
+    <span class="username" contenteditable="true">Użytkownik 2</span>
+    <span class="coins" contenteditable="true">0</span>
+    <span class="coin-label"> monet 🥈</span>
+  </div>
+  <div id="rank3" class="rank-item thi-rank" data-index="2">
+    <span class="username" contenteditable="true">Użytkownik 3</span>
+    <span class="coins" contenteditable="true">0</span>
+    <span class="coin-label"> monet 🥉</span>
+  </div>
+  <div id="rank4" class="rank-item" data-index="3">
+    <span class="username" contenteditable="true">Użytkownik 4</span>
+    <span class="coins" contenteditable="true">0</span>
+    <span class="coin-label"> monet 🏅</span>
+  </div>
+</div>
+<!-- Logo w prawym dolnym rogu -->
+<img src="logo.png" alt="Logo" class="logo">
+<script src="ranking.js"></script>
+</body>
+</html>

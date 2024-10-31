@@ -1,0 +1,140 @@
+/* Tło wideo */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Wypełnia całe okno */
+  z-index: -1; /* Ustawione za innymi elementami */
+  background-color: black;
+  opacity: 90%;
+  filter: brightness(50%);
+}
+
+/* Styl główny dla całej strony */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło, aby tekst był czytelny */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  color: #fff; /* Biały kolor tekstu na ciemnym tle */
+}
+
+/* Nagłówek */
+.ranking-header {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.ranking-header h1 {
+  font-size: 3.5em;
+  color: #ffffff;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.ranking-header p {
+  font-size: 1.3em;
+  color: #d3d3d3;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+
+/* Kontener rankingu */
+.ranking-container {
+  width: 700px;
+  max-width: 90%;
+}
+
+/* Styl dla każdego elementu rankingu */
+.rank-item {
+  padding: 20px;
+  margin: 15px 0;
+  background-color: #f9f9f9; /* Jaśniejszy, elegancki kolor tła */
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Delikatniejszy cień */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: text;
+}
+
+.rank-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Większy cień przy najechaniu */
+}
+
+
+/* Pierwsze miejsce - wyróżnienie */
+.top-rank {
+  background: linear-gradient(135deg, #ffe29f, #ffcc73);
+  font-size: 1.5em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 204, 115, 0.7);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(255, 204, 115, 1);
+  }
+}
+.sec-rank
+{
+  background: linear-gradient(135deg, #e9e9e9, #c8c8c8);
+  font-size: 1.3em;
+}
+.thi-rank
+{
+  background: linear-gradient(135deg, #897c75, #855f4b);
+  font-size: 1.3em;
+}
+/* Styl tekstu w rankingu */
+.username, .coins {
+  font-weight: 500;
+  color: #444;
+  font-size: 1.8em;
+}
+/* Usunięcie ramki wokół edytowalnego tekstu */
+.rank-item .username:focus,
+.rank-item .coins:focus {
+    outline: none; /* Usuwa domyślną ramkę */
+    box-shadow: none; /* Usuwa cień, jeśli się pojawia */
+}
+
+.rank-item {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.coins {
+  display: inline-flex;
+  align-items: center;
+}
+
+.coin-label {
+  margin-left: 0px;
+  margin-right: 10px;
+  color: #262626;
+  font-size: 0.9em;
+}
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; /* Ustaw rozmiar logo */
+  height: auto;
+  opacity: 0.8; /* Trochę przezroczystości, aby było subtelne */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
